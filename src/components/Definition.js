@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Definition = () => {
+const Definition = ({definition}) => {
   return(
-  <div></div>
+  <div>
+    Definition : {definition}
+  </div>
   )
 };
 
