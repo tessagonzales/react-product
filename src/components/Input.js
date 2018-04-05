@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class Input extends Component {
+  state = {
+
+  };
+  
   render() {
     return (
       <div className="Input">

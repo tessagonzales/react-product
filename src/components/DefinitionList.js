@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ProductList = () => {
+const DefinitionList = () => {
   return(
   <div>
   </div>
   )
 };
 
-export default ProductList;
+export default DefinitionList;
