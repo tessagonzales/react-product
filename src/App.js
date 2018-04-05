@@ -6,27 +6,30 @@ import axios from 'axios'
 import './App.css';
 
 class App extends Component {
-
-  state = {
-    urbanDic: {}
+  constructor(props){
+    super(props);
+    this.state = {
+      urbanDic : ''
+    }
+    this.searchTerm = this.searchTerm.bind(this)
   }
 
-componentDidMount(){
-  axios.get(`http://api.urbandictionary.com/v0/define?term=wat`)
-  .then(urbanDic => this.setState({ urbanDic :urbanDic.data }))
-}
+  componentDidMount(){
+    axios.get(`http://api.urbandictionary.com/v0/define?term=wat`)
+    .then(urbanDic => this.setState({ urbanDic :urbanDic.data }))
+  }
 
-searchTerm(term){
-  axios.get(`http://api.urbandictionary.com/v0/define?term=${term}`)
-  .then(urbanDic => this.setState({ urbanDic :urbanDic.data }))
-}
-
-
+  searchTerm(term){
+    console.log(term);
+    axios.get(`http://api.urbandictionary.com/v0/define?term=${term}`)
+    .then((urbanDic) =>{
+      this.setState({ urbanDic : urbanDic.data })
+      console.log(this.state.urbanDic);
+    })
+  }
   render() {
-    console.log(this.state.urbanDic)
     return (
       <div className="">
-        <Input />
         <Input search={this.searchTerm}/>
       </div>
     );
