@@ -1,6 +1,6 @@
 import React from 'react';
 import Definition from './Definition'
-const DefinitionList = ({ urbanDic }) => {
+const DefinitionList = ({ urbanDic , search }) => {
 
   if(typeof(urbanDic.list) !=='undefined'){
     let list = urbanDic.list
@@ -13,6 +13,7 @@ const DefinitionList = ({ urbanDic }) => {
 
     return (
       <div>
+        <b>Search Results for {search}  </b><br/>
         <b>Definitions:</b> <br />
         {allDefinitions} <br /><br />
 
