@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Input extends Component {
   render() {
     return (
-      <div></div>
+      <div className="Input">
+        <input type="text" className="" value=""></input>
+      </div>
     );
   }
 }
