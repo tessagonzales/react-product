@@ -6,13 +6,11 @@ import './App.css';
 
 class App extends Component {
 
-  handleSearch = (searchTerm)=>{
-    console.log(searchTerm);
-  }
+
   render() {
     return (
       <div className="">
-        <Input search={(searchTerm)=>{this.handleSearch(searchTerm)}}/>
+        <Input search={this.searchTerm}/>
       </div>
     );
   }
