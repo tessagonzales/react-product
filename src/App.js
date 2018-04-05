@@ -31,6 +31,7 @@ class App extends Component {
     return (
       <div className="">
         <Input search={this.searchTerm}/>
+        <DefinitionList urbanDic={this.state.urbanDic} />
       </div>
     );
   }
