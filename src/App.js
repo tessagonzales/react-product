@@ -21,11 +21,13 @@ searchTerm(term){
   .then(urbanDic => this.setState({ urbanDic :urbanDic.data }))
 }
 
+
   render() {
     console.log(this.state.urbanDic)
     return (
       <div className="">
         <Input />
+        <Input search={this.searchTerm}/>
       </div>
     );
   }
