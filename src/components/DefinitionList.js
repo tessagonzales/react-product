@@ -2,17 +2,17 @@ import React from 'react';
 import Definition from './Definition'
 
 const DefinitionList = ({ urbanDic }) => {
-  if(urbanDic.list === 'undefined'){
-    console.log("UNDEFINED LIST");
+  if(typeof(urbanDic.list) !=='undefined'){
+    let definition = urbanDic.list[0].definition;
+    return (
+      <div>
+        <li>Definition :{definition} </li>
+      </div>
+    )
   }else{
-    console.log(urbanDic.list[0]);
+    return <div></div>
   }
-  return (
-    <div>
-      <li>Definition : </li>
-    </div>
 
-  )
 };
 
 export default DefinitionList;
