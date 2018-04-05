@@ -2,10 +2,13 @@ import React from 'react';
 import Definition from './Definition'
 const DefinitionList = ({ urbanDic }) => {
   if(typeof(urbanDic.list) !=='undefined'){
-    let definition = urbanDic.list[0].definition;
+    let list = urbanDic.list
+    console.log(list)
+    let allDefinitions = list.map((def,idx) => <Definition key={idx} definition={def.definition} />)
+
     return (
       <div>
-        <Definition definition={definition} />
+        {allDefinitions}
       </div>
     )
   }else{
