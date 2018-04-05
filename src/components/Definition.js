@@ -10,8 +10,8 @@ const Definition = ({definition , tags }) => {
     )
   }else{
     return(
-    <div>
-        <li>{definition}</li>
+    <div className="definition">
+        <li >{definition}</li>
     </div>
     )
   }

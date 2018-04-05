@@ -15,9 +15,11 @@ class Input extends Component {
   }
   render() {
     return (
-      <div className="Input">
+      <div className="position-center-half">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" className="" onChange={(e)=>{this.handleKeyboard(e)} }></input>
+          <div className="input-container">
+            <input type="text" className="" onChange={(e)=>{this.handleKeyboard(e)} } placeholder="Search for Word"></input>
+          </div>
         </form>
       </div>
     );

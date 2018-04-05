@@ -12,8 +12,8 @@ const DefinitionList = ({ urbanDic , search }) => {
     let allTags = theTags.map((tag, idx) => <Definition key={idx} tags={tag} />)
 
     return (
-      <div>
-        <b>Search Results for {search}  </b><br/>
+      <div style={{width:'80%',marginLeft:'10%'}}>
+        <h2>Search Results for <i>{search}</i>  </h2><br/>
         <b>Definitions:</b> <br />
         {allDefinitions} <br /><br />
 

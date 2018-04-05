@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get(`http://api.urbandictionary.com/v0/define?term=wat`)
+    axios.get(`http://api.urbandictionary.com/v0/define?term=urbandictionary`)
     .then(urbanDic => this.setState({ urbanDic :urbanDic.data }))
   }
 
@@ -31,7 +31,15 @@ class App extends Component {
   render() {
     return (
       <div className="">
-        <Input search={this.searchTerm}/>
+        <div class="nav-bar bg-green text-center color-white">
+          <div class="">URBAN </div>
+          <div class=""> </div>
+          <div class=""> </div>
+          <div class=""> </div>
+          <div class=""> </div>
+          <div class=""> </div>
+        </div><br/>
+        <Input search={this.searchTerm}/><br/>
         <DefinitionList search={this.state.search} urbanDic={this.state.urbanDic} />
       </div>
     );
