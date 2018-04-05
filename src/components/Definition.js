@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Definition = ({definition}) => {
+const Definition = ({definition , tags }) => {
+  console.log(tags)
   return(
   <div>
-    Definition : {definition}
+    {definition}
+    {tags}
   </div>
   )
 };
